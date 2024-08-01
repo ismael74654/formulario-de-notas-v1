@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Notas - SENA</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <img src="logo.png" alt="Logo SENA" class="logo">
+            <h1>Formulario de Notas - SENA</h1>
+            <form id="formNotas">
+                <div class="input-group">
+                    <label for="idAprendiz">ID Aprendiz:</label>
+                    <input type="text" id="idAprendiz" name="idAprendiz" required>
+                </div>
+                <div class="input-group">
+                    <label for="nombreAprendiz">Nombre Aprendiz:</label>
+                    <input type="text" id="nombreAprendiz" name="nombreAprendiz" required>
+                </div>
+                <table id="notasTable">
+                    <tr>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Definitiva</th>
+                    </tr>
+                    <tr>
+                        <td><input type="number" id="nota1" name="nota1" min="0" max="5" step="0.1" required></td>
+                        <td><input type="number" id="nota2" name="nota2" min="0" max="5" step="0.1" required></td>
+                        <td><input type="number" id="nota3" name="nota3" min="0" max="5" step="0.1" required></td>
+                        <td><input type="text" id="definitiva" name="definitiva" readonly></td>
+                    </tr>
+                </table>
+                <button type="button" onclick="calcularDefinitiva()">Calcular Definitiva</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
